@@ -19,8 +19,8 @@ public class JewelleryShopController {
 		this.jewelleryShopService = jewelleryShopService;
 	}
 	/**
-	 * eg:http://localhost:9081/getDiscount?type="gold" /
-	 * http://localhost:9081/getDiscount?type="diamond"
+	 * eg:http://localhost:9081/getDiscount?type=gold /
+	 * http://localhost:9081/getDiscount?type=diamond
 	 * @param type
 	 * @return
 	 */
@@ -30,6 +30,7 @@ public class JewelleryShopController {
 		product.setType(type);
 
 		jewelleryShopService.getProductDiscount(product);
+		System.out.println(product.toString());
 
 		return product;
 	}

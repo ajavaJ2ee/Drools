@@ -21,4 +21,10 @@ public class Product {
 		this.discount = discount;
 	}
 
+	@Override
+	public String toString() {
+		return "Product [type=" + type + ", discount=" + discount + "]";
+	}
+
+	
 }

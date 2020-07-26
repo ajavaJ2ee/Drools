@@ -1,15 +1,15 @@
 package rules
  
-import com.javainuse.model.Product
-rule "Offer for Diamond"
+import com.javainuse.model.Country
+rule "Currency  for India"
 	when 
-		productObject: Product(type=="diamond")
+		productObject: Country(countryName=="india")
 	then
-		productObject.setDiscount(15);
+		productObject.setCountryCurrency("Rupee");
 	end
-rule "Offer for Gold"
+rule "Currency  for USA"
 	when 
-		productObject: Product(type=="gold")
+		productObject: Country(countryName=="usa")
 	then
-		productObject.setDiscount(25);
+		productObject.setCountryCurrency("Dollar");
 	end

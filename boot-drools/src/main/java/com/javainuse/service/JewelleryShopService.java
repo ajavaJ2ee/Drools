@@ -22,6 +22,7 @@ public class JewelleryShopService {
 		kieSession.insert(product);
 		kieSession.fireAllRules();
 		kieSession.dispose();
+		System.out.println("From rules:"+product.toString());
 		return product;
 	}
 }
