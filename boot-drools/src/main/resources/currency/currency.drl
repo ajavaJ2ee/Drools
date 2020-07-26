@@ -1,0 +1,15 @@
+package currency
+ 
+import com.javainuse.model.Country
+rule "Currency  for India"
+	when 
+		productObject: Country(countryName=="india")
+	then
+		productObject.setCountryCurrency("Rupee");
+	end
+rule "Currency  for USA"
+	when 
+		productObject: Country(countryName=="usa")
+	then
+		productObject.setCountryCurrency("Dollar");
+	end

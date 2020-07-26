@@ -16,7 +16,7 @@ public class CountryCurrencyService {
 	}
 
 	public Country getCurrency(Country country) {
-		KieSession kieSession = kieContainer.newKieSession("rulesSession");
+		KieSession kieSession = kieContainer.newKieSession("currencyRulesSession");
 		kieSession.insert(country);
 		kieSession.fireAllRules();
 		kieSession.dispose();
